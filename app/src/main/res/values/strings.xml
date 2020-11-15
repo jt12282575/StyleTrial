@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">StyleTrial</string>
+    <string name="action_favorite">最喜歡</string>
+    <string name="action_settings">設定~</string>
+    <string name="action_search">搜尋</string>
 </resources>

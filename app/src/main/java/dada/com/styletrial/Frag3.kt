@@ -1,5 +1,6 @@
 package dada.com.styletrial
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,6 +15,11 @@ class Frag3: Fragment() {
 
     private var _binding:FragmentTrialBinding? = null
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(false)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,10 +41,12 @@ class Frag3: Fragment() {
         _binding = null
     }
 
+
     override fun onResume() {
         super.onResume()
         Log.i("Frag", "onResume 3 ")
         (requireActivity() as? AppCompatActivity)?.supportActionBar?.setIcon(R.mipmap.ic_launcher)
+
     }
 
     override fun onPause() {

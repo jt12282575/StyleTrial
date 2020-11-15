@@ -2,6 +2,7 @@ package dada.com.styletrial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
@@ -78,6 +79,17 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId){
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+
 }
 
 class ViewPagerAdapter(activity: MainActivity): FragmentStateAdapter(activity) {
