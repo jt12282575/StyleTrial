@@ -45,7 +45,7 @@ class Frag3: Fragment() {
     override fun onResume() {
         super.onResume()
         Log.i("Frag", "onResume 3 ")
-        (requireActivity() as? AppCompatActivity)?.supportActionBar?.setIcon(R.mipmap.ic_launcher)
+        (requireActivity() as? AppCompatActivity)?.supportActionBar?.setLogo(R.mipmap.ic_launcher)
 
     }
 

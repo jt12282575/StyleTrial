@@ -1,20 +1,18 @@
-package dada.com.styletrial
+package dada.com.styletrial.child_frag
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
+import dada.com.styletrial.databinding.FragmentChildTrialBinding
 import dada.com.styletrial.databinding.FragmentTrialBinding
 import kotlinx.android.synthetic.main.fragment_trial.view.*
 
-class Frag2: Fragment() {
+class FragChild5: Fragment() {
 
-    private var _binding:FragmentTrialBinding? = null
+    private var _binding:FragmentChildTrialBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,14 +20,14 @@ class Frag2: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentTrialBinding.inflate(inflater,container,false)
+        _binding = FragmentChildTrialBinding.inflate(inflater,container,false)
         val view = binding.root
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvF.text = "2"
+        binding.tvFChild.text = "5"
     }
 
     override fun onDestroyView() {
@@ -39,12 +37,11 @@ class Frag2: Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.i("Frag", "onResume 2 ")
-        (requireActivity() as? AppCompatActivity)?.supportActionBar?.setLogo(null)
+        Log.i("Frag", "c onResume 5 ")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("Frag1", "onPause 2 ")
+        Log.i("Frag1", "c onPause 5 ")
     }
 }

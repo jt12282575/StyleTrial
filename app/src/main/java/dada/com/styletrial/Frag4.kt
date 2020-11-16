@@ -3,10 +3,10 @@ package dada.com.styletrial
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import dada.com.styletrial.databinding.FragmentTrialBinding
-import kotlinx.android.synthetic.main.fragment_trial.view.*
 
 class Frag4: Fragment() {
 
@@ -54,7 +54,16 @@ class Frag4: Fragment() {
         val searchItem = menu?.findItem(R.id.action_search)
         val searchView = searchItem?.actionView as SearchView
         searchView.setIconifiedByDefault(false)
-        searchView.isIconified = false
+        searchItem.expandActionView()
+        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                return false
+            }
+        })
         super.onCreateOptionsMenu(menu, inflater)
     }
 }

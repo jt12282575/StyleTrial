@@ -38,7 +38,7 @@ class Frag1: Fragment() {
     override fun onResume() {
         super.onResume()
         Log.i("Frag", "onResume 1 ")
-        (requireActivity() as? AppCompatActivity)?.supportActionBar?.setIcon(R.mipmap.ic_launcher)
+        (requireActivity() as? AppCompatActivity)?.supportActionBar?.setLogo(R.mipmap.ic_launcher)
     }
 
     override fun onPause() {
